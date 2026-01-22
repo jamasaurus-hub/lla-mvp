@@ -1,13 +1,174 @@
-body {
+/* App.css */
+
+/* Reset body / margins */
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* App container */
+.App {
+  display: flex;
+  flex-direction: column; /* header, main, footer stacked */
+  min-height: 100vh;
+}
+
+/* Main layout: sidebar + page content */
+.MainLayout {
+  display: flex;           /* side-by-side */
+  flex: 1;                 /* fill remaining height */
+}
+
+/* Sidebar */
+.SideNav {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+  flex-shrink: 0;          /* don't shrink */
+}
+
+/* Page content */
+.PageContent {
+  flex: 1;                 /* take remaining width */
+  padding: 1rem;
+}
+
+/* Header / Footer */
+header, footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: bold;
+}
+
+/* DeckTile.css */
+.DeckTile {
+  width: 100%;                    /* full width of parent */
+  padding: 1rem 1.5rem;           /* space inside the card */
+  margin: 0.5rem 0;                /* vertical margin between cards */
+  border-radius: 12px;             /* rounded edges */
+  background-color: #ffffff;        /* white card */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* subtle shadow */
+  cursor: pointer;                 /* indicates clickable */
+  transition: transform 0.2s, box-shadow 0.2s; /* hover animation */
+}
+
+.DeckTile:hover {
+  transform: translateY(-2px);     /* slight lift on hover */
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15); /* stronger shadow */
+}
+
+.DeckTile h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.DeckTile p {
+  margin: 0.25rem 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.NewDeckButton {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  margin: 0.5rem 0;
+  border-radius: 12px;
+  background-color: #e0f7fa; /* light blue for new */
+  color: #00796b;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.NewDeckButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.DeckPage {
+  padding: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.DeckTitle {
+  margin-bottom: 1rem;
+}
+
+.DeckTitleInput {
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+}
+
+.ButtonPanel {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.SaveButton {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.SaveButton:hover {
+  background-color: #45a049;
+}
+
+.TermWindow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.CardRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.CardInput {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex: 1;
+}
+
+.ArrowIcon {
+  color: #666;
+  font-size: 1rem;
+}
+
+.AddCard {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  color: #007bff;
+  font-weight: bold;
+}
+
+.AddCard:hover {
+  text-decoration: underline;
 }

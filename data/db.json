@@ -1,0 +1,30 @@
+{
+  "decks": [
+    {
+      "id": "1",
+      "name": "Deck",
+      "isActive": true,
+      "deckState": "in_progress",
+      "createdAt": "2026-01-01"
+    }
+  ],
+  "cards": [
+    {
+      "id": "1",
+      "deckId": 1,
+      "term": "hablar",
+      "definition": "to speak",
+      "context": "Quiero hablar contigo",
+      "contextDefinition": "",
+      "sourceUrl": "https://example.com",
+      "createdAt": "2026-01-01"
+    },
+    {
+      "id": "c469",
+      "deckId": 1,
+      "term": "El escroto",
+      "definition": "scrotum",
+      "createdAt": "2026-01-22T22:13:34.772Z"
+    }
+  ]
+}

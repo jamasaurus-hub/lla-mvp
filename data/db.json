@@ -6,6 +6,13 @@
       "isActive": true,
       "deckState": "in_progress",
       "createdAt": "2026-01-01"
+    },
+    {
+      "id": "98c0",
+      "name": "New Deck",
+      "isActive": false,
+      "deckState": "New",
+      "createdAt": "2026-01-22T23:04:31.629Z"
     }
   ],
   "cards": [

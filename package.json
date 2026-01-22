@@ -8,6 +8,7 @@
     "@testing-library/react": "^16.3.1",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.13.2",
+    "json-server": "^1.0.0-beta.5",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
     "react-icons": "^5.5.0",
@@ -16,8 +17,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "node server.js",
+    "dev": "json-server --watch db.json --port 3501",
+    "react-start": "react-scripts start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
